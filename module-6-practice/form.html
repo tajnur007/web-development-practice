@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/nav.css">
+    <title>Form</title>
+    <style>
+        label {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="audio-video.html">Audio-Video</a></li>
+                <li><a href="form.html">Form</a></li>
+                <li class="dropdown">
+                    <a href="semantics.html">Semantics</a>
+                    <ul>
+                        <li><a href="table.html">Table</a></li>
+                        <li><a href="svg.html">SVG</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Jamaler Mayer Special Pitha</h1>
+    <form action="">
+        <p>Name: <input type="text" name="name" id="name"></p>
+        <p>Email: <input type="email"></p>
+        <fieldset>
+            <legend>Select your pitha</legend>
+            <label for="vapa"><input type="radio" name="pitha" id="vapa">Vapa Pitha</label>
+            <label for="tel"><input type="radio" name="pitha" id="tel">Teler Pitha</label>
+            <label for="patisapta"><input type="radio" name="pitha" id="patisapta">Patisapta</label>
+            <label for="chitoi"><input type="radio" name="pitha" id="chitoi">Chitoi</label>
+        </fieldset>
+        <fieldset>
+            <legend>Select Vorta</legend>
+            <label for="sutki"><input type="checkbox" name="vorta" id="sutki">Sutki Vorta</label>
+            <label for="sorisa"><input type="checkbox" name="vorta" id="sorisa">Sorisa Vorta</label>
+            <label for="begun"><input type="checkbox" name="vorta" id="begun">Begun Vorta</label>
+            <label for="kalo"><input type="checkbox" name="vorta" id="kalo">Kalozira Vorta</label>
+        </fieldset>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+</body>
+
+</html>

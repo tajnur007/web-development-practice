@@ -1,0 +1,34 @@
+body {
+    font-size: 20px;
+}
+a {
+    text-decoration: none;
+    color: darkslategray;
+}
+nav > ul{
+    display: flex;
+    list-style: none;
+}
+nav ul li {
+    padding: 5px 15px;
+    font-size: 25px;
+    font-weight: 700;
+}
+nav ul li:hover {
+    border-radius: 10px;
+    background-color:hotpink;
+}
+nav ul li ul {
+    list-style: none;
+    position: absolute;
+    background-color: yellow;
+    display: none;
+    padding-left: 0;
+}
+.dropdown:hover ul {
+    display: block;
+}
+footer {
+    text-align: center;
+    color: gray
+}
