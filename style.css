@@ -1,0 +1,24 @@
+body {
+    font-size: 20px;
+}
+header h1 {
+    text-align: center;
+}
+.modules {
+    margin: auto;
+    width:fit-content;
+}
+.modules a {
+    text-decoration: none;
+    margin: 2px;
+    padding: 10px 20px;
+    color: darkslategray;
+    font-weight: 700;
+    border: 2px solid grey;
+    border-radius: 20px;
+}
+.modules a:hover {
+    border: 2px solid darkslategray;
+    background-color: darkslategray;
+    color: white;
+}
