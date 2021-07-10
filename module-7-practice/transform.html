@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform Test</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .box {
+            width: 300px;
+            height: 300px;
+            margin: 0 50px;
+        }
+
+        .box1 {
+            background-color: lawngreen;
+            border: 5px solid indianred;
+        }
+
+        .box2 {
+            background-color: goldenrod;
+            border: 5px solid blueviolet;
+            transform: scale(.5);
+        }
+
+        .box3 {
+            background-color: lightseagreen;
+            border: 5px solid crimson;
+            transform: scale(.75) rotate(45deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Transform Test</h1>
+        <div class="container">
+            <div class="box box1">
+                <h1>Box - 1</h1>
+            </div>
+            <div class="box box2">
+                <h1>Box - 2</h1>
+            </div>
+            <div class="box box3">
+                <h1>Box - 3</h1>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
