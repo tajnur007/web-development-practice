@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Cricket (Animation)</title>
+    <style>
+        body {
+            font-size: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .ground {
+            display: flex;
+            height: 500px;
+            border: 5px solid green;
+            position: relative;
+        }
+
+        .ground img {
+            width: 250px;
+            position: absolute;
+            top: 20px;
+            transform: rotate(30deg);
+            transform-origin: top right;
+        }
+
+        .ground:hover img {
+            transform: rotate(0deg);
+            transform-origin: top right;
+            transition: transform .3s ease-in;
+        }
+
+        .ball {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 350px;
+            left: 233px;
+            background-color: darkred;
+            border-radius: 50%;
+        }
+
+        .ground:hover .ball {
+            animation: play 2s linear .35s 1 forwards;
+            animation-play-state: running;
+        }
+
+        .line1 {
+            margin-top: 13px;
+            margin-bottom: 2px;
+        }
+
+        .line2 {
+            margin-top: 0;
+        }
+
+        @keyframes play {
+            0% {
+                top: 350px;
+                left: 233px;
+            }
+
+            30% {
+                top: 250px;
+                left: 560px;
+                transform: rotate(300deg);
+            }
+
+            60% {
+                top: 470px;
+                left: 890px;
+                transform: rotate(600deg);
+            }
+
+            80% {
+                top: 400px;
+                left: 1050px;
+                transform: rotate(800deg);
+            }
+
+            90% {
+                top: 470px;
+                left: 1200px;
+                transform: rotate(900deg);
+            }
+
+            100% {
+                top: 470px;
+                left: 1310px;
+                transform: rotate(1020deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Playing Cricket using Transform, Transition and Animation</h1>
+        <div class="ground">
+            <div>
+                <img src="bat.png" alt="">
+            </div>
+            <div class="ball">
+                <hr class="line1">
+                <hr class="line2">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
