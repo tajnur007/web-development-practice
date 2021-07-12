@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box Test</title>
+    <style>
+        body {
+            background-color: #f0eded;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .section {
+            background-color: white;
+            border: 5px solid darkcyan;
+            padding: 20px;
+            margin: 50px 30px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px gray;
+        }
+
+        .box-container {
+            display: flex;
+            border: 3px dotted slateblue;
+        }
+
+        .justify-content {
+            justify-content: space-between;
+        }
+
+        .align-items {
+            height: 500px;
+            align-items: center;
+        }
+
+        .mid-center {
+            height: 500px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .flex-grow .box2 {
+            flex-grow: 1;
+        }
+
+        .order .box1 {
+            order: 2;
+        }
+
+        .order .box2 {
+            order: 3;
+        }
+
+        .order .box3 {
+            order: 1;
+        }
+
+        .flex-direction {
+            flex-direction: column;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 3px dashed saddlebrown;
+            margin: 30px;
+        }
+
+        .box1 {
+            background-color: seagreen;
+        }
+
+        .box2 {
+            background-color: salmon;
+        }
+
+        .box3 {
+            background-color: peru;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Flex Properties Checking</h1>
+    <div class="section">
+        <h1>Justify Content (Horizontal Align)</h1>
+        <div class="box-container justify-content">
+            <div class="box box1">
+                <h1>Box - 1</h1>
+            </div>
+            <div class="box box2">
+                <h1>Box - 2</h1>
+            </div>
+            <div class="box box3">
+                <h1>Box - 3</h1>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <h1>Align Items (Vertical Align)</h1>
+        <div class="box-container align-items">
+            <div class="box box1">
+                <h1>Box - 1</h1>
+            </div>
+            <div class="box box2">
+                <h1>Box - 2</h1>
+            </div>
+            <div class="box box3">
+                <h1>Box - 3</h1>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <h1>Horizontal and Vertical Align (Center)</h1>
+        <div class="box-container mid-center">
+            <div class="box box1">
+                <h1>Box - 1</h1>
+            </div>
+            <div class="box box2">
+                <h1>Box - 2</h1>
+            </div>
+            <div class="box box3">
+                <h1>Box - 3</h1>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <h1>Flex Grow</h1>
+        <div class="box-container flex-grow">
+            <div class="box box1">
+                <h1>Box - 1</h1>
+            </div>
+            <div class="box box2">
+                <h1>Box - 2</h1>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <h1>Order</h1>
+        <div class="box-container order">
+            <div class="box box1">
+                <h1>Box - 1</h1>
+            </div>
+            <div class="box box2">
+                <h1>Box - 2</h1>
+            </div>
+            <div class="box box3">
+                <h1>Box - 3</h1>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <h1>Flex Direction (Column) (Row by Default)</h1>
+        <div class="box-container flex-direction">
+            <div class="box box1">
+                <h1>Box - 1</h1>
+            </div>
+            <div class="box box2">
+                <h1>Box - 2</h1>
+            </div>
+            <div class="box box3">
+                <h1>Box - 3</h1>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
