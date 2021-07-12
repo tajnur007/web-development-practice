@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar of a Month</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        .calendar {
+            margin: 30px;
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+
+        }
+
+        .day {
+            padding: 10px 0;
+            margin: 5px;
+            font-size: 30px;
+            font-weight: 700;
+            text-align: center;
+            background-color: #a6dcfd;
+            border-radius: 10px;
+            border: 3px solid lightseagreen;
+        }
+
+        .off-day {
+            color: white;
+            background-color: #d60404;
+        }
+
+        .date {
+            height: 80px;
+            margin: 5px;
+            font-size: 30px;
+            font-weight: 700;
+            text-align: center;
+            background-color: darkgray;
+            border-radius: 10px;
+            border: 3px solid lightseagreen;
+        }
+
+        .date:nth-child(7n-1) {
+            color: #d60404;
+        }
+
+        .date:nth-child(7n) {
+            color: #d60404;
+        }
+
+        .other-month {
+            color: gray;
+            background-color: lightgray;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Calendar Demo Using Grid Template</h1>
+    <div class="calendar">
+        <div class="day">SUN</div>
+        <div class="day">MON</div>
+        <div class="day">TUE</div>
+        <div class="day">WED</div>
+        <div class="day">THU</div>
+        <div class="day off-day">FRI</div>
+        <div class="day off-day">SAT</div>
+        <div class="date other-month">28</div>
+        <div class="date other-month">29</div>
+        <div class="date other-month">30</div>
+        <div class="date">1</div>
+        <div class="date">2</div>
+        <div class="date">3</div>
+        <div class="date">4</div>
+        <div class="date">5</div>
+        <div class="date">6</div>
+        <div class="date">7</div>
+        <div class="date">8</div>
+        <div class="date">9</div>
+        <div class="date">10</div>
+        <div class="date">11</div>
+        <div class="date">12</div>
+        <div class="date">13</div>
+        <div class="date">14</div>
+        <div class="date">15</div>
+        <div class="date">16</div>
+        <div class="date">17</div>
+        <div class="date">18</div>
+        <div class="date">19</div>
+        <div class="date">20</div>
+        <div class="date">21</div>
+        <div class="date">22</div>
+        <div class="date">23</div>
+        <div class="date">24</div>
+        <div class="date">25</div>
+        <div class="date">26</div>
+        <div class="date">27</div>
+        <div class="date">28</div>
+        <div class="date">29</div>
+        <div class="date">30</div>
+        <div class="date">31</div>
+        <div class="date other-month">1</div>
+    </div>
+</body>
+
+</html>
