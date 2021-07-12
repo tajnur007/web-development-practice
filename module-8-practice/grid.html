@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Properties Checking</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            /* grid-gap: 40px; */
+            grid-gap: 30px 60px;
+            /* grid-row-gap: 30px;
+            grid-column-gap: 60px; */
+        }
+
+        .box {
+            height: 200px;
+            border: 3px solid lightseagreen;
+            background-color: khaki;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Grid Properties Checking</h1>
+    <div class="container">
+        <div class="box">
+            <h1>Box - 1</h1>
+        </div>
+        <div class="box">
+            <h1>Box - 2</h1>
+        </div>
+        <div class="box">
+            <h1>Box - 3</h1>
+        </div>
+        <div class="box">
+            <h1>Box - 4</h1>
+        </div>
+        <div class="box">
+            <h1>Box - 5</h1>
+        </div>
+        <div class="box">
+            <h1>Box - 6</h1>
+        </div>
+        <div class="box">
+            <h1>Box - 7</h1>
+        </div>
+        <div class="box">
+            <h1>Box - 8</h1>
+        </div>
+    </div>
+</body>
+
+</html>
