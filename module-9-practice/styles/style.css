@@ -81,3 +81,14 @@ section {
 .author {
     color: #562EFF;
 }
+
+
+/* Latest Courses Section  */
+.course-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
+}
+.course-image {
+    width: 100%;
+}
