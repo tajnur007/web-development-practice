@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM vs BOM</title>
+
+    <style>
+        body {
+            font-size: 20px;
+        }
+
+        table {
+            border: 2px solid brown;
+        }
+
+        thead {
+            text-align: center;
+            background-color: black;
+            color: white;
+        }
+
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="width: 75%; margin-left: auto; margin-right: auto; margin-top: 5%;">
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <td>DOM</td>
+                        <td>BOM</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>DOM stands for Document Object Model</td>
+                        <td>BOM stands for Browser Object Model</td>
+                    </tr>
+                    <tr>
+                        <td>Used to manipulate the HTML document.</td>
+                        <td>Used for access and manipulation of the browser window</td>
+                    </tr>
+                    <tr>
+                        <td>Has a set standard of rules to be used across documents.</td>
+                        <td>No standard set of rules, each browser has its own standards for implementing BOM</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
