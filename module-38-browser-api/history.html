@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History</title>
+    <style>
+        body {
+            font-size: 20px;
+        }
+
+        div {
+            padding: 50px 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <h1>History API</h1>
+        <h4>To read details about History API, please visit <a
+                href="https://developer.mozilla.org/en-US/docs/Web/API/History_API" target="_blank">this</a> page. <br>
+            Practice below properties in browser console.</h4>
+        <h1>Properties</h1>
+
+        <p>
+            "window.history" is same as "history". If you want to verify it then goto browser console and write
+            window.history == history. Then it will return "true". <br> <br>
+
+            Basically "history" has following three operations:
+        <ul>
+            <li>history.back()</li>
+            <li>history.forward()</li>
+            <li>history.go()</li>
+        </ul>
+        </p>
+        <h3>history.back()</h3>
+        <p>It will act as a user clicked on back button of the browser.</p>
+        <h3>history.forward()</h3>
+        <p>It will act as a user clicked on forward button of the browser.</p>
+        <h3>history.go()</h3>
+        <p>history.go(-1) will bring user one step back page. history.go(-5) will bring user five steps back page.
+            history.go(3) will bring user three steps forward page if such pages are exits. But history.go(0) or
+            history.go() will refresh the current page.</p>
+    </div>
+
+</body>
+
+</html>
