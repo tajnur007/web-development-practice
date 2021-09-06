@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local and Session Storage</title>
+    <style>
+        body {
+            font-size: 20px;
+        }
+
+        div {
+            padding: 50px 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <h1>Local and Session Storage</h1>
+        <h4>To read details about Cookie, please visit <a
+                href="https://www.digitalocean.com/community/tutorials/js-introduction-localstorage-sessionstorage#:~:text=localStorage%20and%20sessionStorage%20are%20almost,web%20app%20clears%20the%20data."
+                target="_blank">this</a> page. <br>
+        </h4>
+
+        <h3>Difference between localStorage and sessionStorage?</h3>
+        <p>localStorage and sessionStorage are almost identical and have the same API. The difference is that with
+            sessionStorage, the data is persisted only until the window or tab is closed. With localStorage, the data is
+            persisted until the user manually clears the browser cache or until your web app clears the data. This
+            tutorial features localStorage, but the syntax for sessionStorage is the same.</p>
+
+        <h3>Operations</h3>
+        <code>
+            localStorage.setItem(key, value); //set a new value or update existing<br>
+            localStorage.getItem(key); //get the value corresponding to the key<br>
+            localStorage.removeItem(key); //removes the specific key<br>
+            localStorage.clear(); //removes all from localStorage<br>
+        </code>
+        <p>The above operations are same for sessionStorage. <br>
+            Data stored in a localStorage or sessionStorage like a JSON file. So if we need to use it then use
+            JSON.parse() and JSON.stringify() methods.
+        </p>
+
+
+    </div>
+
+
+    <script>
+        console.log(document.cookie);
+        console.log(document.cookie.split('; '));
+        console.log(document.cookie.split('; ').map(c => c.split('=')));
+
+        const cookieInfo = console.log(document.cookie.split('; ').map(c => c.split('=')));
+        for (const info of cookieInfo) {
+            console.log('Key:', info[0], ', Value:', info[1]);
+        }
+
+    </script>
+
+</body>
+
+</html>
