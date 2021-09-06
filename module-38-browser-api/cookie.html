@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie</title>
+    <style>
+        body {
+            font-size: 20px;
+        }
+
+        div {
+            padding: 50px 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <h1>Cookie</h1>
+        <h4>To read details about Cookie, please visit <a
+                href="https://www.kaspersky.com/resource-center/definitions/cookies" target="_blank">this</a> page. <br>
+        </h4>
+
+        <h3>What is Cookie?</h3>
+        <p>Cookie is a set of texts like username and password which is stored in user's browser. Cookies are usally
+            used for identifying specific user and improving user experience. Data sorted in a cookie is created by the
+            server upon your connection. This data is labeled by an ID unique to you and your computer. When cookies are
+            exchanged between your computer and server, the server reads the ID and knows what information need to serve
+            you.</p>
+        <p>You can chech your stored cookies in your browser. Goto Application tab of your browser and find cookie
+            section.</p>
+        <p>You can console cookies using 'document.cookie' command. To see some operations regrding cookie, see the
+            scripts of this page with console of your browser.</p>
+
+    </div>
+
+
+    <script>
+        console.log(document.cookie);
+        console.log(document.cookie.split('; '));
+        console.log(document.cookie.split('; ').map(c => c.split('=')));
+
+        const cookieInfo = console.log(document.cookie.split('; ').map(c => c.split('=')));
+        for (const info of cookieInfo) {
+            console.log('Key:', info[0], ', Value:', info[1]);
+        }
+
+    </script>
+
+</body>
+
+</html>
