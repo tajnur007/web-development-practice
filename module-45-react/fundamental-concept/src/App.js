@@ -14,6 +14,9 @@ function App() {
 }
 
 function Student(props) {
+  const [points, setpoints] = useState(0);
+  const increasePoint = () => setpoints(points + 1);
+  const decreasePoint = () => setpoints(points - 1);
   const studentStyle = {
     backgroundColor: 'green',
     margin: '20px',
@@ -26,6 +29,9 @@ function Student(props) {
     <div style={studentStyle}>
       <h2>Name: {props.name}</h2>
       <h4>Roll: {props.roll}, Batch: {props.batch}</h4>
+      <h4>Points: {points}</h4>
+      <button onClick={increasePoint}>Increase Point</button>
+      <button onClick={decreasePoint}>Decrease Point</button>
     </div>
   );
 }
