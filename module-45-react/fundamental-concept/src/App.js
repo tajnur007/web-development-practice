@@ -26,6 +26,18 @@ function LoadUser() {
   return (
     <div>
       <h1>User Loaded: {users.length}</h1>
+      {
+        users.map(user => <User name={user.name} email={user.email}></User>)
+      }
+    </div>
+  );
+}
+
+function User(props) {
+  return (
+    <div className='userStyle'>
+      <h2>Name: {props.name}</h2>
+      <h4>Name: {props.email}</h4>
     </div>
   );
 }
