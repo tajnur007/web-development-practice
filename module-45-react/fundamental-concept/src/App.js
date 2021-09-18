@@ -1,23 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Student name='Ahsan Kabir' roll='23' batch='3rd'></Student>
+      <Student name='Nasir Hossain' roll='21' batch='3rd'></Student>
+      <Student name='Kazi Tajnur Islam' roll='28' batch='4th'></Student>
+      <Student name='Riyad Hossain' roll='30' batch='4th'></Student>
+    </div>
+  );
+}
+
+function Student(props) {
+  return (
+    <div>
+      <h2>Name: {props.name}</h2>
+      <h4>Roll: {props.roll}, Batch: {props.batch}</h4>
     </div>
   );
 }
