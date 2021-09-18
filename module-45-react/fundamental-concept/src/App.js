@@ -14,8 +14,16 @@ function App() {
 }
 
 function Student(props) {
+  const studentStyle = {
+    backgroundColor: 'green',
+    margin: '20px',
+    padding: '15px',
+    color: 'white',
+    border: '2px solid red',
+    borderRadius: '10px'
+  };
   return (
-    <div>
+    <div style={studentStyle}>
       <h2>Name: {props.name}</h2>
       <h4>Roll: {props.roll}, Batch: {props.batch}</h4>
     </div>
