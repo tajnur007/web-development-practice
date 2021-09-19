@@ -5,12 +5,12 @@ import { useEffect, useState } from 'react';
 function App() {
   return (
     <div className="App">
-      <Country></Country>
+      <Countries></Countries>
     </div>
   );
 }
 
-function Country() {
+function Countries() {
   const [countries, setCountries] = useState([]);
 
   useEffect(() => {
@@ -21,7 +21,18 @@ function Country() {
   return (
     <div>
       <h1>Total Countries: {countries.length}</h1>
+      {
+        countries.map(country => <Country name={country.name} capital={country.capital}></Country>)
+      }
+    </div>
+  );
+}
 
+function Country(props) {
+  return (
+    <div>
+      <h1>Country Name: {props.name}</h1>
+      <h4>Capital: {props.capital}</h4>
     </div>
   );
 }
