@@ -5,11 +5,17 @@ import { useEffect, useState } from 'react';
 function App() {
   return (
     <div className="App">
-      <Countries></Countries>
+
+
     </div>
   );
 }
 
+
+export default App;
+
+
+/*
 function Countries() {
   const [countries, setCountries] = useState([]);
 
@@ -37,4 +43,5 @@ function Country(props) {
   );
 }
 
-export default App;
+
+ */
