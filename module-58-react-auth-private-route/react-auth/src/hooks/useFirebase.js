@@ -39,6 +39,7 @@ const useFirebase = () => {
 
     return {
         user,
+        errorMsg,
         logout,
         useGoogleAuth
     };
