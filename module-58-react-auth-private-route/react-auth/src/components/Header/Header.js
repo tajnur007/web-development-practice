@@ -6,7 +6,6 @@ const Header = () => {
     return (
         <div className="header">
             <NavLink exact to="/">Home </NavLink>
-            <NavLink exact to="/about">About </NavLink>
             <NavLink exact to="/login">Login </NavLink>
             <NavLink exact to="/register">Register </NavLink>
         </div>
