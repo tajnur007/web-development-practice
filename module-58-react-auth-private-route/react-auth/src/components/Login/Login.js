@@ -1,20 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import useFirebase from '../../hooks/useFirebase';
 
 const Login = () => {
+    const { useGoogleAuth } = useFirebase();
+
     return (
         <div>
-            <form action="">
-                <h2>Please Login with your email and password</h2>
-                <input type="text" placeholder="Put your email here" />
-                <br />
-                <input type="password" placeholder="Put your password here" />
-                <br />
-                <button>Login</button>
-                <br />
-                <Link to="/register">Create an account</Link>
+            <h2>Please Login with your email and password</h2>
+            <input type="text" placeholder="Put your email here" />
+            <br />
+            <input type="password" placeholder="Put your password here" />
+            <br />
+            <button>Login</button>
+            <br />
+            <button onClick={useGoogleAuth}>Login with Google</button>
+            <br />
+            <Link to="/register">Create an account</Link>
 
-            </form>
         </div>
     );
 };
