@@ -11,7 +11,7 @@ const Register = () => {
             <br />
             <button>Register</button>
             <br />
-            <Link path="/login">Already have an account?</Link>
+            <Link to="/login">Already have an account?</Link>
         </div>
     );
 };
