@@ -35,7 +35,7 @@ const useFirebase = () => {
         signOut(auth).then(() => {
             // Sign-out successful.
         }).catch((error) => {
-            errorMsg = error.message;
+            setErrorMsg(error.message);
         });
     }
 
