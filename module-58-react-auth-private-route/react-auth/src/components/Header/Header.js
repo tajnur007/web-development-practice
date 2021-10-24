@@ -11,7 +11,7 @@ const Header = () => {
             <NavLink exact to="/login">Login </NavLink>
             <NavLink exact to="/register">Register </NavLink>
             <span>{user.displayName} </span>
-            <button onClick={logout}>Logout</button>
+            {user.displayName && <button onClick={logout}>Logout</button>}
         </div>
     );
 };
