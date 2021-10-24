@@ -24,16 +24,14 @@ const useFirebase = () => {
         signInWithPopup(auth, provider)
             .then((result) => {
                 setUser(result.user);
-                console.log(user);
             }).catch((error) => {
                 setErrorMsg(error.message);
-                console.log(errorMsg);
             });
     }
 
     const logout = () => {
         signOut(auth).then(() => {
-            // Sign-out successful.
+            setUser({});
         }).catch((error) => {
             setErrorMsg(error.message);
         });
