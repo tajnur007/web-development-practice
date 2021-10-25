@@ -5,7 +5,7 @@ import useFirebase from '../../hooks/useFirebase';
 const Register = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const { createAccount } = useFirebase();
+    const { createAccount, errorMsg } = useFirebase();
 
     const handleEmail = (e) => {
         setEmail(e.target.value);
@@ -27,6 +27,8 @@ const Register = () => {
             <input onChange={handlePassword} type="text" placeholder="Give a password" />
             <br />
             <button onClick={handleRegister}>Register</button>
+            <br />
+            <p style={{ color: "red" }}>{errorMsg}</p>
             <br />
             <Link to="/login">Already have an account?</Link>
         </div>

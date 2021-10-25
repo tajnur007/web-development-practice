@@ -24,6 +24,7 @@ const useFirebase = () => {
         signInWithPopup(auth, provider)
             .then((result) => {
                 setUser(result.user);
+                setErrorMsg('');
             }).catch((error) => {
                 setErrorMsg(error.message);
             });
@@ -32,7 +33,7 @@ const useFirebase = () => {
     const createAccount = (email, password) => {
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
-                console.log('User created for the email:', email);
+                setErrorMsg('');
             })
             .catch((error) => {
                 setErrorMsg(error.message);
@@ -42,6 +43,7 @@ const useFirebase = () => {
     const logout = () => {
         signOut(auth).then(() => {
             setUser({});
+            setErrorMsg('');
         }).catch((error) => {
             setErrorMsg(error.message);
         });

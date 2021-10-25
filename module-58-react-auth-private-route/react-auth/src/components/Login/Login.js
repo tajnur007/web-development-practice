@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import useFirebase from '../../hooks/useFirebase';
 
 const Login = () => {
-    const { useGoogleAuth } = useFirebase();
+    const { useGoogleAuth, errorMsg } = useFirebase();
 
     return (
         <div>
@@ -15,6 +15,8 @@ const Login = () => {
             <button>Login</button>
             <br />
             <button onClick={useGoogleAuth}>Login with Google</button>
+            <br />
+            <p style={{ color: "red" }}>{errorMsg}</p>
             <br />
             <Link to="/register">Create an account</Link>
 
