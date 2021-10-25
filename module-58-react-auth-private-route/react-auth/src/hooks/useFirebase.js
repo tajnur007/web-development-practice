@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import initFirebaseAuth from "../Firebase/firebase.init";
-import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, createUserWithEmailAndPassword, signOut } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "firebase/auth";
 
 initFirebaseAuth();
 
@@ -40,6 +40,16 @@ const useFirebase = () => {
             });
     }
 
+    const login = (email, password) => {
+        signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                setErrorMsg('');
+            })
+            .catch((error) => {
+                setErrorMsg(error.message);
+            });
+    }
+
     const logout = () => {
         signOut(auth).then(() => {
             setUser({});
@@ -53,6 +63,7 @@ const useFirebase = () => {
         user,
         errorMsg,
         logout,
+        login,
         createAccount,
         useGoogleAuth
     };
