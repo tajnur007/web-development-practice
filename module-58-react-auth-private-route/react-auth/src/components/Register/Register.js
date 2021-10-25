@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import useFirebase from '../../hooks/useFirebase';
+import useAuth from '../../hooks/useAuth';
 
 const Register = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const { createAccount, errorMsg } = useFirebase();
+    const { createAccount, errorMsg } = useAuth();
 
     const handleEmail = (e) => {
         setEmail(e.target.value);

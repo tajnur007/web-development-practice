@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import useFirebase from '../../hooks/useFirebase';
+import useAuth from '../../hooks/useAuth';
 
 const Login = () => {
-    const { useGoogleAuth, errorMsg, login } = useFirebase();
+    const { useGoogleAuth, errorMsg, login } = useAuth();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
