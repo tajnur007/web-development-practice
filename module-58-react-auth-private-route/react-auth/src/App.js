@@ -5,6 +5,8 @@ import Login from './components/Login/Login';
 import Register from './components/Register/Register';
 import Header from './components/Header/Header';
 import AuthProvider from './contexts/AuthProvider';
+import UserDetails from './components/UserDetails/UserDetails';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -16,6 +18,9 @@ function App() {
             <Route exact path="/">
               <Home />
             </Route>
+            <PrivateRoute exact path="/userDetails">
+              <UserDetails />
+            </PrivateRoute>
             <Route exact path="/login">
               <Login />
             </Route>
