@@ -1,18 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import useFirebase from '../../hooks/useFirebase';
 
 const Login = () => {
-    const { useGoogleAuth, errorMsg } = useFirebase();
+    const { useGoogleAuth, errorMsg, login } = useFirebase();
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const handleEmail = (e) => {
+        setEmail(e.target.value);
+    }
+
+    const handlePassword = (e) => {
+        setPassword(e.target.value);
+    }
+
+    const handleLoginClick = () => {
+        login(email, password);
+    }
 
     return (
         <div>
             <h2>Please Login with your email and password</h2>
-            <input type="text" placeholder="Put your email here" />
+            <input onChange={handleEmail} type="text" placeholder="Put your email here" />
             <br />
-            <input type="password" placeholder="Put your password here" />
+            <input onChange={handlePassword} type="password" placeholder="Put your password here" />
             <br />
-            <button>Login</button>
+            <button onClick={handleLoginClick}>Login</button>
             <br />
             <button onClick={useGoogleAuth}>Login with Google</button>
             <br />
