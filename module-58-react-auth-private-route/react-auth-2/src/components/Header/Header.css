@@ -1,0 +1,15 @@
+a {
+    text-decoration: none;
+}
+
+.header {
+    padding: 15px 0px;
+    background-color: #e4c49b7e;
+}
+
+.header a {
+    /* padding-right: 15px; */
+    padding-right: 20px;
+    font-size: 20px;
+    font-weight: 700;
+}
