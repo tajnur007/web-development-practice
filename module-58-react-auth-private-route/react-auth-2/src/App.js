@@ -33,7 +33,7 @@ function App() {
           <Route exact path="/register">
             <Register />
           </Route>
-          <Route exact path="/userDetails">
+          <Route exact path="/userDetails/:id">
             <UserDetails />
           </Route>
         </Switch>
